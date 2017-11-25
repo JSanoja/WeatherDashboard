@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es" ng-app="bondacom">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script> -->
+    <script src="js/angular.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body ng-controller="main">
+    <header>
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <img class="logo" src="img/logo.png" />
+            <span class="navbar-brand">Dashboard</span>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+            </div>
+          </nav>
+        </header>
+        <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <input type="checkbox" id="id-name--1" name="set-name" class="switch-input" ng-model="ta" ng-true-value="true" ng-false-value="false">
+    	     <label for="id-name--1" class="switch-label">
+             Temperatura Actual
+           </label>
+           <input type="checkbox" id="id-name--2" name="set-name" class="switch-input" ng-model="mm">
+            <label for="id-name--2" class="switch-label">
+              Max y Min de las ultimas 24h
+            </label>
+        </nav>
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
+          <section class="row text-center placeholders">
+            <div class="col-6 col-sm-6 placeholder TempA" ng-show="ta">
+              <div  >
+                <div class="iconActual"><span class="load {{ocultar}}"></span><img src="{{current.icono}}" /></div>
+                <div class="tempActual"><span class="load {{ocultar}}"></span>{{current.actual}}°C</div>
+                <div class="condActual"><span class="load {{ocultar}}"></span>{{current.condicion}}</div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 placeholder">
+              <img src="img/avatar.png" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Erlich Bachman</h4>
+              <span class="text-muted">Administrador</span>
+            </div>
+            <div class="col-6 col-sm-6 placeholder MinMax" ng-show="mm">
+              <div>
+                <div class="tMM">
+                  <div class="">▲ <span class="load {{ocultar2}}"></span>{{history.Maxima}}°C - - ▼ <span class="load {{ocultar2}}"></span>{{history.Minima}}°C</div>
+                </div>
+                <div class="tRango">Temperatura Maxima y Minima de las ultimas 24h,</br> desde <span class="load {{ocultar2}}"></span>{{history.Desde}} Hasta <span class="load {{ocultar2}}"></span>{{history.Hasta}}</div>
+              </div>
+            </div>
+
+            <div class="col-6 col-sm-6 placeholder">
+              <img src="img/avatar2.png" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Richard Hendricks</h4>
+              <span class="text-muted">Online ahora</span>
+            </div>
+          </section>
+
+
+        </main>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+</html>
