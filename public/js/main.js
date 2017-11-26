@@ -32,3 +32,7 @@ app.controller('main', function($scope, $http) {
   };
 
 });
+
+jQuery(document).ready(function () {
+  jQuery(".dash").animate({opacity:1},300);
+})

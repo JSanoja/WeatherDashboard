@@ -46,31 +46,35 @@
           </ul>
         </nav>
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
-          <section class="row text-center placeholders">
+          <section class="row text-center placeholders dash">
             <div class="col-12 col-sm-12 placeholder">
               <h1>Dashboard</h1>
             </div>
-            <div class="col-6 col-sm-6 placeholder TempA">
-              <div class="control">
-              <input type="checkbox" id="id-name--1" name="set-name" class="switch-input" ng-model="ta" ng-true-value="true" ng-false-value="false">
-        	     <label for="id-name--1" class="switch-label"></label>
-             </div>
-              <div   ng-show="ta">
-                <div class="iconActual"><span class="load {{ocultar}}"></span><img src="{{current.icono}}" /></div>
-                <div class="tempActual"><span class="load {{ocultar}}"></span>{{current.actual}}°C</div>
-                <div class="condActual"><span class="load {{ocultar}}"></span>{{current.condicion}}</div>
+            <div class="col-6 col-sm-6 placeholder ">
+              <div class="TempA" >
+                <div class="control">
+                <input type="checkbox" id="id-name--1" name="set-name" class="switch-input" ng-model="ta" ng-true-value="true" ng-false-value="false">
+          	     <label for="id-name--1" class="switch-label"></label>
+               </div>
+                <div   ng-show="ta">
+                  <div class="iconActual"><span class="load {{ocultar}}"></span><img src="{{current.icono}}" /></div>
+                  <div class="tempActual"><span class="load {{ocultar}}"></span>{{current.actual}}°C</div>
+                  <div class="condActual"><span class="load {{ocultar}}"></span>{{current.condicion}}</div>
+                </div>
               </div>
             </div>
-            <div class="col-6 col-sm-6 placeholder MinMax" >
-              <div class="control">
-                <input type="checkbox" id="id-name--2" name="set-name" class="switch-input" ng-model="mm">
-                 <label for="id-name--2" class="switch-label"></label>
-              </div>
-              <div ng-show="mm">
-                <div class="tMM" >
-                  <div class="">▲ <span class="load {{ocultar2}}"></span>{{history.Maxima}}°C - - ▼ <span class="load {{ocultar2}}"></span>{{history.Minima}}°C</div>
+            <div class="col-6 col-sm-6 placeholder " >
+              <div class="MinMax">
+                <div class="control">
+                  <input type="checkbox" id="id-name--2" name="set-name" class="switch-input" ng-model="mm">
+                   <label for="id-name--2" class="switch-label"></label>
                 </div>
-                <div class="tRango">Temperatura Maxima y Minima de las ultimas 24h,</br> desde <span class="load {{ocultar2}}"></span>{{history.Desde}} Hasta <span class="load {{ocultar2}}"></span>{{history.Hasta}}</div>
+                <div ng-show="mm">
+                  <div class="tMM" >
+                    <div class="">▲ <span class="load {{ocultar2}}"></span>{{history.Maxima}}°C - - ▼ <span class="load {{ocultar2}}"></span>{{history.Minima}}°C</div>
+                  </div>
+                  <div class="tRango">Temperatura Maxima y Minima de las ultimas 24h,</br> desde <span class="load {{ocultar2}}"></span>{{history.Desde}} Hasta <span class="load {{ocultar2}}"></span>{{history.Hasta}}</div>
+                </div>
               </div>
             </div>
 

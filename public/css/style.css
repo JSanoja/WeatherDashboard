@@ -1,13 +1,8 @@
+/* Body */
+
 body {
   font: 13px 'Barlow Semi Condensed', sans-serif;
 }
-
-
-a {
-  color: #00B7FF;
-}
-
-
 
 /* header */
 
@@ -36,51 +31,42 @@ header {
 .bg-dark {
     background-color: #2d2d2d !important;
 }
+.navbar-dark .navbar-brand {
+    color: #210c0c;
+}
+.navbar {
+  padding: 0px !important;
+}
+
+/* Sidebar */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: #034ea2;
 }
 
-.navbar-dark .navbar-brand {
-    color: #210c0c;
-}
-
-.navbar {
-
-  padding: 0px !important;
-
-}
+/* Content */
 h1 {
     text-align: left;
 }
 section.row.text-center.placeholders {
     padding: 0px 10px;
 }
-.MinMax {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.dash {
+  opacity: 0;
+}
+
+/* Modulos Temperaturas */
+.MinMax, .TempA  {
+    padding: 10px;
     background: #ececec;
-    box-shadow: 0px 0px 5px 0px;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    margin-bottom: 10px;
+    box-shadow: 1px 1px 7px 1px rgba(0,0,0,0.36);
+    height: 100%;
+    border-radius: 10px;
 }
 
 .tMM {
     font-size: 35px;
     padding-top: 30px;
     padding-top: 60px;
-}
-
-.load {
-    width: 15px;
-    height: 15px;
-    background-image: url(http://localhost:3000/img/load.gif);
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .iconActual {
@@ -96,11 +82,6 @@ section.row.text-center.placeholders {
 }
 .control {
     position: absolute;
-    padding-top: 8px;
-}
-
-.ocultar, .ocultar2 {
-  display: none;
 }
 
 .contenido {
@@ -109,14 +90,6 @@ section.row.text-center.placeholders {
 
 .tempActual {
     font-size: 75px;
-}
-
-.TempA {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background: #ececec;
-    box-shadow: 0px 0px 5px 0px;
 }
 
 .navbar-brand {
@@ -128,6 +101,22 @@ section.row.text-center.placeholders {
 .container-fluid {
     margin-top: 135px;
 }
+/* Preload */
+.load {
+    width: 15px;
+    height: 15px;
+    background-image: url(http://localhost:3000/img/load.gif);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ocultar, .ocultar2 {
+  display: none;
+}
+
+/* Suiche Material Design*/
 
 .switch-input {
   display: none;
@@ -182,4 +171,8 @@ section.row.text-center.placeholders {
   -ms-transform: translate(80%, -50%);
   -webkit-transform: translate(80%, -50%);
   transform: translate(80%, -50%);
+}
+
+.nav-pills .nav-link {
+    border-radius: .15rem;
 }
