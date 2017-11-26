@@ -3,7 +3,7 @@
 Un dashboard realizado con el api apixu.com.
 
 # Backend desarrollada con Node en Express
-- Es una Apirest que se encarga de hacer las peticiones a apixu.com.
+- Es una API REST que se encarga de hacer las peticiones a la API de apixu.com.
 - El Apirest Manda los datos en formato json
 - /current devuelve en json la temperatura actual, junto a la condicion climatica y el icono que lo identifica
 - /history devuelve en json la Maxima y la Minima Calculada de las ultimas 24 horas y el rango de tiempo en cual estos datos fueron tomados.
@@ -11,7 +11,7 @@ Un dashboard realizado con el api apixu.com.
 # Frontend
 - Hecho con AngularJS, Bootstrap, jQuery
 - Se usaron algunos CDN
-- Inspirado en Silicon Valley
+- Inspirado en Silicon Valley & The Weather Chanel
 
 # Instalacion
 En una linea de comandos.
