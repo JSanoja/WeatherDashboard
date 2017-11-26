@@ -15,9 +15,14 @@
     <header>
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <img class="logo" src="img/logo.png" />
-            <span class="navbar-brand">Dashboard</span>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+            <div class="userInfo">
+              <div>
+                <h4>Richard Hendricks</h4>
+                <span class="text-muted">Online ahora</span>
+              </div>
+              <img src="img/avatar2.png" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
 
             </div>
           </nav>
@@ -25,44 +30,51 @@
         <div class="container-fluid">
       <div class="row">
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
-          <input type="checkbox" id="id-name--1" name="set-name" class="switch-input" ng-model="ta" ng-true-value="true" ng-false-value="false">
-    	     <label for="id-name--1" class="switch-label">
-             Temperatura Actual
-           </label>
-           <input type="checkbox" id="id-name--2" name="set-name" class="switch-input" ng-model="mm">
-            <label for="id-name--2" class="switch-label">
-              Max y Min de las ultimas 24h
-            </label>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Usuario <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Visitante</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pronostico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Salir</a>
+            </li>
+          </ul>
         </nav>
-
         <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3">
           <section class="row text-center placeholders">
-            <div class="col-6 col-sm-6 placeholder TempA" ng-show="ta">
-              <div  >
+            <div class="col-12 col-sm-12 placeholder">
+              <h1>Dashboard</h1>
+            </div>
+            <div class="col-6 col-sm-6 placeholder TempA">
+              <div class="control">
+              <input type="checkbox" id="id-name--1" name="set-name" class="switch-input" ng-model="ta" ng-true-value="true" ng-false-value="false">
+        	     <label for="id-name--1" class="switch-label"></label>
+             </div>
+              <div   ng-show="ta">
                 <div class="iconActual"><span class="load {{ocultar}}"></span><img src="{{current.icono}}" /></div>
                 <div class="tempActual"><span class="load {{ocultar}}"></span>{{current.actual}}°C</div>
                 <div class="condActual"><span class="load {{ocultar}}"></span>{{current.condicion}}</div>
               </div>
             </div>
-            <div class="col-6 col-sm-6 placeholder">
-              <img src="img/avatar.png" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Erlich Bachman</h4>
-              <span class="text-muted">Administrador</span>
-            </div>
-            <div class="col-6 col-sm-6 placeholder MinMax" ng-show="mm">
-              <div>
-                <div class="tMM">
+            <div class="col-6 col-sm-6 placeholder MinMax" >
+              <div class="control">
+                <input type="checkbox" id="id-name--2" name="set-name" class="switch-input" ng-model="mm">
+                 <label for="id-name--2" class="switch-label"></label>
+              </div>
+              <div ng-show="mm">
+                <div class="tMM" >
                   <div class="">▲ <span class="load {{ocultar2}}"></span>{{history.Maxima}}°C - - ▼ <span class="load {{ocultar2}}"></span>{{history.Minima}}°C</div>
                 </div>
                 <div class="tRango">Temperatura Maxima y Minima de las ultimas 24h,</br> desde <span class="load {{ocultar2}}"></span>{{history.Desde}} Hasta <span class="load {{ocultar2}}"></span>{{history.Hasta}}</div>
               </div>
             </div>
 
-            <div class="col-6 col-sm-6 placeholder">
-              <img src="img/avatar2.png" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-              <h4>Richard Hendricks</h4>
-              <span class="text-muted">Online ahora</span>
-            </div>
+
           </section>
 
 

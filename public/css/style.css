@@ -1,20 +1,59 @@
 body {
   font: 13px 'Barlow Semi Condensed', sans-serif;
 }
+
+
+a {
+  color: #00B7FF;
+}
+
+
+
+/* header */
+
 header {
-    background: #e7ff60;
-    text-align: center;
+
 }
-.sidebar {
-}
+
 .logo {
-    width: 120px;
+    width: 100px;
+}
+
+.userInfo {
+    position: absolute;
+    right: 20px;
+}
+.userInfo img {
+    height: 50px;
+}
+.userInfo > div {
+    float: left;
+    margin-right: 20px;
+}
+.userInfo h4 {
+    color:white;
 }
 .bg-dark {
-    background-color: #e3ff64!important;
+    background-color: #2d2d2d !important;
 }
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #034ea2;
+}
+
 .navbar-dark .navbar-brand {
     color: #210c0c;
+}
+
+.navbar {
+
+  padding: 0px !important;
+
+}
+h1 {
+    text-align: left;
+}
+section.row.text-center.placeholders {
+    padding: 0px 10px;
 }
 .MinMax {
     text-align: center;
@@ -26,10 +65,13 @@ header {
     padding-top: 7px;
     margin-bottom: 10px;
 }
+
 .tMM {
     font-size: 35px;
     padding-top: 30px;
+    padding-top: 60px;
 }
+
 .load {
     width: 15px;
     height: 15px;
@@ -40,44 +82,57 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
 .iconActual {
     height: 67px;
 }
+
 .col-6.col-sm-6 {
     margin-bottom: 20px;
+    height: 210px;
 }
 .condActual {
     height: 16px;
 }
-.ocultar, .ocultar2 {display: none;}
+.control {
+    position: absolute;
+    padding-top: 8px;
+}
+
+.ocultar, .ocultar2 {
+  display: none;
+}
+
 .contenido {
     padding-top: 20px;
 }
+
 .tempActual {
     font-size: 75px;
 }
-a {
-  color: #00B7FF;
-}
+
 .TempA {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     background: #ececec;
     box-shadow: 0px 0px 5px 0px;
-    padding-top: 30px;
 }
-span.navbar-brand {
+
+.navbar-brand {
     position: absolute;
     right: 20px;
     font-size: 30px;
 }
+
 .container-fluid {
     margin-top: 135px;
 }
+
 .switch-input {
   display: none;
 }
+
 .switch-label {
   position: relative;
   display: inline-block;
@@ -87,6 +142,7 @@ span.navbar-brand {
   text-align: left;
   padding: 16px 0 16px 44px;
 }
+
 .switch-label:before, .switch-label:after {
   content: "";
   position: absolute;
@@ -99,6 +155,7 @@ span.navbar-brand {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+
 .switch-label:before {
   left: 1px;
   width: 34px;
@@ -106,6 +163,7 @@ span.navbar-brand {
   background-color: #9E9E9E;
   border-radius: 8px;
 }
+
 .switch-label:after {
   left: 0;
   width: 20px;
@@ -118,6 +176,7 @@ span.navbar-brand {
 .switch-input:checked + .switch-label:before {
   background-color: #A5D6A7;
 }
+
 .switch-input:checked + .switch-label:after {
   background-color: #4CAF50;
   -ms-transform: translate(80%, -50%);

@@ -2,7 +2,8 @@ var app=angular.module('bondacom', []); // inicializo angular
 app.controller('main', function($scope, $http) {
   $scope.ta=true;
   $scope.mm=true;
-
+  current();
+  history();
   setInterval(function(){  // actualizo el resultado cada 8 segundos
     if ($scope.ta) {
       current();
@@ -10,7 +11,7 @@ app.controller('main', function($scope, $http) {
     if ($scope.mm) {
       history();
     }
-  }, 8000);
+  }, 80000);
   function current() {  // petiticion de Temp Actual
     $http.get('/current')
   		 	.then(function(data) { // cuando tenga respuesta del servidor
@@ -20,7 +21,7 @@ app.controller('main', function($scope, $http) {
   		 		console.log('Error: ' + data);
   	});
   };
-  function history() { // peticion de Max y Min 
+  function history() { // peticion de Max y Min
     $http.get('/history')    // realizo la peticion
         .then(function(data) {
             $scope.history = data.data;
